@@ -1,0 +1,19 @@
+name: Check Installation
+
+on: push
+
+jobs:
+  install:
+    name: Install
+    strategy:
+      fail-fast: false
+      matrix:
+          os: [macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install omekasy
+        run: |
+          brew update
+          brew install ikanago/tap/omekasy
+          omekasy -h
