@@ -1,4 +1,4 @@
-class Ojisan_fuck < Formula
+class OjisanFuck < Formula
   desc "Brain-fuck interpreter parsing emoji used by Japanese ojisans"
   homepage "https://github.com/ikanago/ojisan_f-ck"
   version "0.1.3"
