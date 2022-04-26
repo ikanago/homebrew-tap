@@ -1,15 +1,15 @@
 class Omekasy < Formula
   desc "Decorate alphanumeric characters in your input with various font; special characters in Unicode"
   homepage "https://github.com/ikanago/omekasy"
-  version "0.2.0"
+  version "1.0.0"
   license "MIT"
 
   if OS.mac?
     url "#{homepage}/releases/download/v#{version}/omekasy-v#{version}-x86_64-apple-darwin.tar.gz"
-    sha256 "c516bb17ca32f4ff97d5ab233d21bcfcf8a19d5b88d9667d1c09c5dcfaad1431"
+    sha256 "70f6f09d05e64ec5b7046f003ff45f359032059cb58b2e8ae8946ee19e9f868b"
   elsif OS.linux?
     url "#{homepage}/releases/download/v#{version}/omekasy-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "7214ab43c583a7e531a1ab932468cc775dc20e5baa81869bfe6608ef6c522cb2"
+    sha256 "0bf637a542ca3d7f0602fc0169a3ff5ac41467576e131dc5b010510d343857ec"
   end
 
   def install
