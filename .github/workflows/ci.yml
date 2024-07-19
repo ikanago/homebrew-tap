@@ -8,12 +8,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-          os: [macos-latest, ubuntu-latest]
+          os: ["macos-13", "macos-14", "ubuntu-22.04"]
+          tap: ["ikanago/tap/omekasy", "ikanago/tap/ojisan_fuck"]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+      - uses: Homebrew/actions/setup-homebrew@master
       - name: Install omekasy
         run: |
           brew update
-          brew install ikanago/tap/omekasy
-          omekasy -h
+          brew install ${{ matrix.tap }}
